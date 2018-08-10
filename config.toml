@@ -1,0 +1,10 @@
+languageCode = "en-us"
+title = "Frederic Lemay"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+enableRobotsTXT = true
+[params]
+  [params.urls]
+    github="https://github.com/flemay"
+    medium="https://medium.com/@fredericlemay"
+

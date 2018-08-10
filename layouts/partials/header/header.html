@@ -1,0 +1,28 @@
+<div class="column is-6 is-offset-3">
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <div class="navbar-item subtitle" href="/">
+          <span>Fred's Blog</span>
+        </div>
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="{{ $.Site.Params.urls.medium }}">
+          <span class="icon is-large">
+            <i class="fab fa-medium fa-2x"></i>
+          </span>
+        </a>
+        <a class="navbar-item" href="{{ $.Site.Params.urls.github }}">
+          <span class="icon is-large">
+            <i class="fab fa-github fa-2x"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
