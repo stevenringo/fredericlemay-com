@@ -1,20 +1,30 @@
-<div class="card">
-  <div class="card-header">
-    <div class="card-header-title">{{ .Title }}</div>
-  </div>
-  <div class="card-image">
+<article class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="is-size-5 has-text-weight-semibold">{{ .Title }}</p>
+        <p class="is-size-7">{{ .Date.Format "January 2, 2006" }}</p>
+      </div>
+      {{- if .Params.blogURL -}}
+      <div class="media-right">
+        <a class="navbar-item" href="{{ .Params.blogURL }}">
+          <i class="fab fa-medium"></i>
+        </a>
+      </div>
+      {{- end -}}
+    </div>
     {{- if .Params.featuredImage -}}
+    <figure class="card-image">
       {{ $featuredImage := resources.Get .Params.featuredImage }}
       {{ $featuredImageResized := $featuredImage.Fill "650x150 q100 Center" }}
       <img src="{{ $featuredImageResized.Permalink }}" alt="">
+    </figure>
     {{- end -}}
+    {{ .Summary }}
   </div>
-  <div class="card-content">
-    <div class="content">
-      blah blah
+  <div class="card-footer">
+    <div class="card-footer-item">
+      <a href="{{ .RelPermalink }}">Read more</a>
     </div>
   </div>
-  <div class="card-footer-item">
-    <a href="">Read more</a>
-  </div>
-</div>
+</article>
