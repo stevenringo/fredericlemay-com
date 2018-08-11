@@ -2,6 +2,7 @@
 @import "../../node_modules/bulma/sass/utilities/_all";
 
 $card-footer-border-top: 0px;
+$link: $grey-dark;
 
 #TableOfContents {
   ul {
@@ -10,3 +11,12 @@ $card-footer-border-top: 0px;
 }
 
 @import "../../node_modules/bulma/bulma";
+
+a {
+  text-decoration: underline;
+}
+
+a.navbar-item {
+  text-decoration: none;
+  color: $black;
+}

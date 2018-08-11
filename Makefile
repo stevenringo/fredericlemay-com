@@ -32,6 +32,7 @@ server:
 .PHONY: server
 
 build:
+	rm -fr resources/_gen
 	$(COMPOSE_RUN_DEV) make _build
 .PHONY: build
 

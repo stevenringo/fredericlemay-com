@@ -2,7 +2,14 @@
   <div class="column is-6 is-offset-3">
     <article class="content has-text-justified">
       <h1>{{ .Title }}</h1>
-      <h8 class="has-text-grey-light">{{ .Date.Format "January 2, 2006" }}</h8>
+      <div class="media">
+          <h8 class="has-text-grey-light">{{ .Date.Format "January 2, 2006" }}</h8>
+          {{- if .Params.blogURL -}}
+          <a class="icon is-pulled-right" href="{{ .Params.blogURL }}">
+            <i class="fab fa-medium"></i>
+          </a>
+          {{- end -}}
+        </div>
         {{- if .Params.featuredImage -}}
         <div>
           {{ $featuredImage := resources.Get .Params.featuredImage }}
