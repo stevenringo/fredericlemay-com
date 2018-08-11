@@ -2,7 +2,7 @@
   <div class="card-content">
     <div class="media">
       <div class="media-content">
-        <p class="is-size-5 has-text-weight-semibold">{{ .Title }}</p>
+        <a class="is-size-4 has-text-weight-semibold cardtitle" href="">{{ .Title }}</a>
         <p class="is-size-7">{{ .Date.Format "January 2, 2006" }}</p>
       </div>
       {{- if .Params.blogURL -}}

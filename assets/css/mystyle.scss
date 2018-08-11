@@ -20,3 +20,19 @@ a.navbar-item {
   text-decoration: none;
   color: $black;
 }
+
+.content {
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+figure.card-image {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+a.cardtitle {
+  text-decoration: none;
+}

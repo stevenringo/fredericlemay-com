@@ -3,18 +3,18 @@
     <article class="content has-text-justified">
       <h1>{{ .Title }}</h1>
       <div class="media">
-          <h8 class="has-text-grey-light">{{ .Date.Format "January 2, 2006" }}</h8>
+          <h8 class="has-text-grey-light media-left">{{ .Date.Format "January 2, 2006" }}</h8>
           {{- if .Params.blogURL -}}
-          <a class="icon is-pulled-right" href="{{ .Params.blogURL }}">
+          <a class="icon media-right" href="{{ .Params.blogURL }}">
             <i class="fab fa-medium"></i>
           </a>
           {{- end -}}
         </div>
         {{- if .Params.featuredImage -}}
-        <div>
+        <figure>
           {{ $featuredImage := resources.Get .Params.featuredImage }}
           <img src="{{ $featuredImage.Permalink }}" alt="">
-        </div>
+        </figure>
       {{- end -}}
       {{ .Content }}
     </article>
