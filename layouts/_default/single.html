@@ -1,6 +1,12 @@
 {{ define "main" }}
   <div class="column is-6 is-offset-3">
     <article class="content has-text-justified">
+        {{- if .Params.featuredImage -}}
+        <figure>
+          {{ $featuredImage := resources.Get .Params.featuredImage }}
+          <img src="{{ $featuredImage.Permalink }}" alt="">
+        </figure>
+      {{- end -}}
       <h1>{{ .Title }}</h1>
       <div class="media">
           <h8 class="has-text-grey-light media-left">{{ .Date.Format "January 2, 2006" }}</h8>
@@ -10,12 +16,7 @@
           </a>
           {{- end -}}
         </div>
-        {{- if .Params.featuredImage -}}
-        <figure>
-          {{ $featuredImage := resources.Get .Params.featuredImage }}
-          <img src="{{ $featuredImage.Permalink }}" alt="">
-        </figure>
-      {{- end -}}
+        <br>
       {{ .Content }}
     </article>
   </div>

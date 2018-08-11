@@ -1,0 +1,9 @@
+{{- if .Params.featuredImage -}}
+<a href="{{ .RelPermalink }}">
+  <figure class="card-image">
+    {{ $featuredImage := resources.Get .Params.featuredImage }}
+    {{ $featuredImageResized := $featuredImage.Fill "650x150 q100 Center" }}
+    <img src="{{ $featuredImageResized.Permalink }}" alt="">
+  </figure>
+</a>
+{{- end -}}

@@ -1,0 +1,12 @@
+<div class="card-content">
+  <a class="is-size-4 has-text-weight-semibold cardtitle" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <div class="media">
+      <h8 class="has-text-grey-light media-left">{{ .Date.Format "January 2, 2006" }}</h8>
+      {{- if .Params.blogURL -}}
+      <a class="icon media-right" href="{{ .Params.blogURL }}">
+        <i class="fab fa-medium"></i>
+      </a>
+      {{- end -}}
+    </div>
+  {{ .Summary }}
+</div>
