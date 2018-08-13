@@ -3,11 +3,14 @@
   {{ partial "head.html" . }}
   <body>
   {{ partial "header/header.html" . }}
-  <section class="section">
-    <div class="container">
+  <section class="flex ml-32 mr-32">
+    <div class="w-1/4"></div>
+    <div class="w-1/2">
       {{block "main" .}}
 
       {{end}}
+    </div>
+    <div class="w-1/4"></div>
   </section>
   </body>
 </html>

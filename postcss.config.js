@@ -1,5 +1,6 @@
 module.exports = {
     plugins: {
+        tailwindcss: './tailwind.js',
         autoprefixer: {
             browsers: [
                 "Android 2.3",
