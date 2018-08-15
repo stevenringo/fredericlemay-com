@@ -66,8 +66,11 @@
   Style for generated content
 */
 .generated-content {
-  @apply leading-normal
+  @apply leading-normal;
+  @apply text-grey-darker;
+  @apply text-justify;
 }
+
 .generated-content a {
   @apply text-grey-darker;
 }
@@ -76,3 +79,21 @@
   @apply text-black;
 }
 
+.generated-content h2 {
+  @apply mt-6;
+  @apply mb-4;
+  @apply text-grey-darkest;
+}
+
+.generated-content p {
+  @apply mb-4;
+}
+
+.generated-content .highlight {
+  @apply mb-6;
+}
+
+.generated-content pre {
+  @apply overflow-auto;
+  @apply p-4;
+}
