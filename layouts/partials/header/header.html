@@ -8,7 +8,7 @@
       </a>
     </div>
 
-    <div class="block lg:hidden">
+    <div id="navbar-burger" class="block lg:hidden">
       <button class="px-3 py-2 border rounded text-grey border-grey-light hover:text-grey-darker hover:border-grey-darker">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
@@ -17,8 +17,8 @@
       </button>
     </div>
 
-    <div class="flex w-full lg:w-auto">
-    <div class="flex flex-col mt-2 shadow flex-grow justify-around lg:p-0 lg:flex-row lg:mt-0 lg:items-center lg:justify-end lg:w-auto lg:shadow-none">
+    <div id="navbar-links-menu" class="hidden w-full lg:w-auto lg:flex">
+    <div class="flex flex-col mt-2 shadow flex-grow p-4 lg:p-0 lg:flex-row lg:mt-0 lg:items-center lg:justify-end lg:w-auto lg:shadow-none">
       <a class="text-grey hover:text-grey-darker" href="{{ $.Site.Params.urls.medium }}">
         <i class="fab fa-medium fa-2x"></i>
       </a>
