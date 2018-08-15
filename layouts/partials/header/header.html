@@ -2,14 +2,14 @@
 
   <div class="flex w-full items-center justify-between flex-wrap bg-white p-6 lg:w-1/2">
 
-    <div class="flex items-center flex-no-shrink text-grey mr-6">
+    <div class="text-grey">
       <a class="no-underline hover:text-grey-darker text-grey" href="/">
         <span class="font-semibold text-xl tracking-tight">Fred's blog</span>
       </a>
     </div>
 
     <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-grey border-grey-light hover:text-grey-darker hover:border-grey-darker">
+      <button class="px-3 py-2 border rounded text-grey border-grey-light hover:text-grey-darker hover:border-grey-darker">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -17,15 +17,16 @@
       </button>
     </div>
 
-    <div class="mt-2 lg:mt-0 p-4 lg:p-0 shadow w-full block flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto lg:shadow-none">
-      <a class="block lg:inline-block text-grey hover:text-grey-darker mt-2 lg:mt-0 mr-4" href="{{ $.Site.Params.urls.medium }}">
+    <div class="flex w-full lg:w-auto">
+    <div class="flex flex-col mt-2 shadow flex-grow justify-around lg:p-0 lg:flex-row lg:mt-0 lg:items-center lg:justify-end lg:w-auto lg:shadow-none">
+      <a class="text-grey hover:text-grey-darker" href="{{ $.Site.Params.urls.medium }}">
         <i class="fab fa-medium fa-2x"></i>
       </a>
 
-      <a class="block lg:inline-block text-grey hover:text-grey-darker mt-2 lg:mt-0" href="{{ $.Site.Params.urls.github }}">
+      <a class="text-grey hover:text-grey-darker mt-4 lg:ml-4 lg:mt-0" href="{{ $.Site.Params.urls.github }}">
         <i class="fab fa-github fa-2x"></i>
       </a>
     </div>
-
+  </div>
   </div>
 </nav>
