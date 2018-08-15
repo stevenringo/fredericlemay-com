@@ -113,7 +113,7 @@ Often when troubleshooting a Docker image, I simply create an empty image and ma
 
 ```Dockerfile
 FROM alpine:3.8
-RUN apk --update add bash make && rm -rf /var/cache/apk/*
+RUN apk --update --no-cache add bash make
 ```
 
 Then I build and start the container in interactive mode `docker build --tag hugo . && docker run --rm -it hugo bash`. After manually installing the extended version of Hugo, I faced this error:
