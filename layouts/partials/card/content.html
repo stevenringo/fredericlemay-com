@@ -1,12 +1,15 @@
-<div class="card-content">
-  <a class="is-size-4 has-text-weight-semibold cardtitle" href="{{ .RelPermalink }}">{{ .Title }}</a>
-  <div class="media">
-      <h8 class="has-text-grey-light media-left">{{ .Date.Format "January 2, 2006" }}</h8>
-      {{- if .Params.blogURL -}}
-      <a class="icon media-right" href="{{ .Params.blogURL }}">
-        <i class="fab fa-medium"></i>
-      </a>
-      {{- end -}}
-    </div>
-  {{ .Summary }}
+<div class="m-8">
+  <a class="leading-normal no-underline antialiased text-grey-darkest" href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
+
+  <div class="flex items-center mb-3 mt-3">
+    <h8 class="text-grey mr-4">{{ .Date.Format "January 2, 2006" }}</h8>
+    {{- if .Params.blogURL -}}
+    <a class="text-grey hover:text-grey-darker" href="{{ .Params.blogURL }}">
+      <i class="fab fa-medium"></i>
+    </a>
+    {{- end -}}
+  </div>
+  <div class="generated-content text-grey-darker">
+    {{ .Summary }}
+  </div>
 </div>
