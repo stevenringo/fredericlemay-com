@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/flemay/fredericlemay-com#README",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.0.1",
     "autoprefixer": "^9.0.0",
     "tailwindcss": "^0.6.4"
   }
