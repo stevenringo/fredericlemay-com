@@ -53,7 +53,7 @@ _build:
 
 _server:
 	rm -fr resources/_gen
-	hugo server -b $${HUGO_BASE_URL} --bind="0.0.0.0"
+	hugo server -b $${HUGO_BASE_URL} --bind="0.0.0.0" -v
 .PHONY: _server
 
 _deploy:
