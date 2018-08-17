@@ -1,7 +1,8 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frederic Lemay</title>
+  {{ partial "head/unfurls" }}
+
+  <title>flemay</title>
 
   {{ $style := resources.Get "css/main.css" | postCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
