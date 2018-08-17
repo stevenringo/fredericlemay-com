@@ -3,7 +3,7 @@ title: Trying out the new Hugo’s Assets Pipeline with Docker
 draft: false
 date: "2018-07-29"
 lastmod:
-featuredImage: img/hugo_assets_pipeline_docker.jpg
+featuredImage: img/blog/hugo_assets_pipeline_docker.jpg
 blogURL: https://medium.com/@fredericlemay/trying-out-the-new-hugos-assets-pipeline-with-docker-61340cd3dfd2
 ---
 
@@ -113,7 +113,7 @@ Often when troubleshooting a Docker image, I simply create an empty image and ma
 
 ```Dockerfile
 FROM alpine:3.8
-RUN apk --update add bash make && rm -rf /var/cache/apk/*
+RUN apk --update --no-cache add bash make
 ```
 
 Then I build and start the container in interactive mode `docker build --tag hugo . && docker run --rm -it hugo bash`. After manually installing the extended version of Hugo, I faced this error:

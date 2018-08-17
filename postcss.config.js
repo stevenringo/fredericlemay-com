@@ -1,7 +1,26 @@
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+const purgecss = require('@fullhuman/postcss-purgecss');
+
 module.exports = {
-    plugins: {
-        tailwindcss: './tailwind.js',
-        autoprefixer: {
+    plugins: [
+        tailwindcss('./tailwind.js'),
+
+        // https://tailwindcss.com/docs/controlling-file-size
+        purgecss({
+            content: ['layouts/**/*.html'],
+            css: ['assets/css/main.css'],
+            extractors: [{
+                extractor: class {
+                    static extract(content) {
+                        return content.match(/[A-z0-9-:\/]+/g) || [];
+                    }
+                },
+                extensions: ['html']
+            }]
+        }),
+
+        autoprefixer({
             browsers: [
                 "Android 2.3",
                 "Android >= 4",
@@ -12,6 +31,6 @@ module.exports = {
                 "Opera >= 12",
                 "Safari >= 6"
             ]
-        }
-    },
+        })
+    ]
 }
