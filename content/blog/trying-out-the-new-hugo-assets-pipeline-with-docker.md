@@ -3,7 +3,7 @@ title: Trying out the new Hugo’s Assets Pipeline with Docker
 draft: false
 date: "2018-07-29"
 lastmod:
-featuredImage: img/hugo_assets_pipeline_docker.jpg
+featuredImage: img/blog/hugo_assets_pipeline_docker.jpg
 blogURL: https://medium.com/@fredericlemay/trying-out-the-new-hugos-assets-pipeline-with-docker-61340cd3dfd2
 ---
 

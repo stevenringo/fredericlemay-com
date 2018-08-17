@@ -5,6 +5,8 @@ const purgecss = require('@fullhuman/postcss-purgecss');
 module.exports = {
     plugins: [
         tailwindcss('./tailwind.js'),
+
+        // https://tailwindcss.com/docs/controlling-file-size
         purgecss({
             content: ['layouts/**/*.html'],
             css: ['assets/css/main.css'],
@@ -17,6 +19,7 @@ module.exports = {
                 extensions: ['html']
             }]
         }),
+
         autoprefixer({
             browsers: [
                 "Android 2.3",
