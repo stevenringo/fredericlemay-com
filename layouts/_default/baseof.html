@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
-  {{ partial "head/head.html" . }}
+  <head>
+    {{ block "metadata" . }}
+    <!-- if no metadata block, display the default one -->
+    {{ partial "head/metadata" . }}
+    {{- end -}}
+
+    <title>{{ block "title" . }}
+        flemay
+    {{ end }}</title>
+
+    {{ partial "head/assets" . }}
+  </head>
+
   <body>
   {{ partial "header/header.html" . }}
   <section class="flex justify-center">

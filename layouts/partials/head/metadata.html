@@ -2,17 +2,18 @@
 {{- $profileImage := resources.Get "img/profile/profile.png" -}}
 {{- $profileImageResized := $profileImage.Resize "100x q100" -}}
 <!-- facebook open graph tags -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:url" content="https://fredericlemay.com/"/>
+<meta property="og:url" content="{{ .Permalink }}"/>
 <meta property="og:title" content="Frederic Lemay"/>
 <meta property="og:description" content="Code. Digital Art. Docker. Golang."/>
-<meta property="og:site_name" content="fredericlemay"/>
+<meta property="og:site_name" content="fredericlemay.com"/>
 <meta property="og:image" content="{{ $profileImageResized.Permalink }}"/>
 
 <!-- twitter card tags additive with the og: tags -->
 <!-- <meta name="twitter:card" content="summary_large_image"> -->
 <meta name="twitter:domain" value="fredericlemay.com" />
 <meta name="twitter:title" value="Frederic Lemay" />
-<meta name="twitter:description" value="Code. Digital Art. Docker. Golang." />
+<meta name="twitter:description" value="Code. Digital Art." />
 <meta name="twitter:image" content="{{ $profileImageResized.Permalink }}"/>
-<meta name="twitter:url" value="https://fredericlemay.com" />
+<meta name="twitter:url" value="{{ .Permalink }}" />

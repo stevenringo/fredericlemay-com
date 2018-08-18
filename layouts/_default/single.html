@@ -1,8 +1,12 @@
+{{- define "metadata" -}}
+{{ partial "blog/single_metadata" . }}
+{{- end -}}
+
 {{- define "main" -}}
 <article class="m-5">
-  {{- if .Params.featuredImage -}}
+  {{- with .Params.featuredImage -}}
   <figure>
-    {{ $featuredImage := resources.Get .Params.featuredImage }}
+    {{ $featuredImage := resources.Get . }}
     <img src="{{ $featuredImage.Permalink }}" alt="">
   </figure>
   {{- end -}}
