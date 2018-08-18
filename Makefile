@@ -48,6 +48,7 @@ clean:
 
 _build:
 	rm -fr resources/_gen
+	rm -fr public
 	hugo -b $${HUGO_BASE_URL}
 .PHONY: _build
 
