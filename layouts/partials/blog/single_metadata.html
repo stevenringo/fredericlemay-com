@@ -1,12 +1,6 @@
 <!-- https://gohugo.io/functions/scratch -->
 {{- $scratch := newScratch -}}
 
-{{- with .Params.featuredImage -}}
-  {{- $featuredImage := resources.Get . -}}
-  {{- $featuredImageResized := $featuredImage.Resize "x150 q100" -}}
-  {{- $scratch.Set "featuredImageResized" $featuredImageResized -}}
-{{- end -}}
-
 <meta charset="utf-8">
 <!-- facebook open graph tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
