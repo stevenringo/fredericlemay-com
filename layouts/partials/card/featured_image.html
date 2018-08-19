@@ -1,8 +1,8 @@
-{{- if .Params.featuredImage -}}
-<a href="{{ .RelPermalink }}">
+{{ $link := .RelPermalink }}
+{{- with .Resources.GetMatch "featuredImage" -}}
+<a href="{{ $link }}">
   <figure>
-    {{ $featuredImage := resources.Get .Params.featuredImage }}
-    {{ $featuredImageResized := $featuredImage.Fill "650x150 q100 Center" }}
+    {{ $featuredImageResized := .Fill "650x150 q100 Center" }}
     <img src="{{ $featuredImageResized.Permalink }}" alt="">
   </figure>
 </a>

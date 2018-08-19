@@ -1,6 +1,3 @@
-<!-- https://gohugo.io/functions/scratch -->
-{{- $scratch := newScratch -}}
-
 <meta charset="utf-8">
 <!-- facebook open graph tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +6,7 @@
 <meta property="og:description" content="{{ .Summary }}"/>
 <meta property="og:site_name" content="fredericlemay.com"/>
 
-{{- with $scratch.Get "featuredImageResized" -}}
+{{- with .Resources.GetMatch "featuredImage" -}}
 <meta property="og:image" content="{{ .Permalink }}"/>
 {{- end -}}
 
@@ -18,7 +15,7 @@
 <meta name="twitter:domain" value="fredericlemay.com" />
 <meta name="twitter:title" value="{{ .Title }}" />
 <meta name="twitter:description" value="{{ .Summary }}" />
-{{- with $scratch.Get "featuredImageResized" -}}
+{{- with .Resources.GetMatch "featuredImage" -}}
 <meta name="twitter:image" content="{{ .Permalink }}"/>
 {{- end -}}
 <meta name="twitter:url" value="{{ .Permalink }}" />

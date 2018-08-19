@@ -4,10 +4,9 @@
 
 {{- define "main" -}}
 <article class="m-5">
-  {{- with .Params.featuredImage -}}
+  {{- with .Resources.GetMatch "featuredImage" -}}
   <figure>
-    {{ $featuredImage := resources.Get . }}
-    <img src="{{ $featuredImage.Permalink }}" alt="">
+    <img src="{{ .Permalink }}" alt="">
   </figure>
   {{- end -}}
 

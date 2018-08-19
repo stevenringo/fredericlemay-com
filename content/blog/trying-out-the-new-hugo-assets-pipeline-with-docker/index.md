@@ -1,11 +1,13 @@
----
-title: Trying out the new Hugo’s Assets Pipeline with Docker
-draft: false
-date: "2018-07-29"
-lastmod:
-featuredImage: img/blog/hugo_assets_pipeline_docker.jpg
-blogURL: https://medium.com/@fredericlemay/trying-out-the-new-hugos-assets-pipeline-with-docker-61340cd3dfd2
----
++++
+title = "Trying out the new Hugo’s Assets Pipeline with Docker"
+draft = false
+date = "2018-07-29"
+blogURL = "https://medium.com/@fredericlemay/trying-out-the-new-hugos-assets-pipeline-with-docker-61340cd3dfd2"
+
+[[resources]]
+  name = "featuredImage"
+  src = "img/featured-image.jpg"
++++
 
 [Hugo][linkHugo], a popular framework for building static websites, released an exciting feature few weeks ago: Assets Pipeline. In a nutshell, Hugo can compile your SCSS/SASS files, minify your assets, [and much more][linkHugoReleaseNotes].
 
