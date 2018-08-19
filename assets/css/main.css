@@ -52,4 +52,20 @@
   @apply overflow-auto;
   @apply p-4;
 }
+
+blockquote {
+  @apply m-0;
+  @apply pl-4;
+  @apply pr-4;
+  @apply pt-2;
+  @apply pb-2;
+  @apply bg-grey-lighter;
+  @apply border-solid;
+  @apply border-l-4;
+  @apply border-grey-dark;
+}
+
+p code {
+  @apply border rounded p-1 text-red-light;
+}
 /* purgecss end ignore */
