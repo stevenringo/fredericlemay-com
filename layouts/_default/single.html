@@ -2,6 +2,10 @@
 {{ partial "blog/single_metadata" . }}
 {{- end -}}
 
+{{- define "title" -}}
+  flemay - {{ .Title }}
+{{- end -}}
+
 {{- define "main" -}}
 <article class="m-5">
   {{- with .Resources.GetMatch "featuredImage" -}}
