@@ -1,7 +1,8 @@
 COMPOSE_RUN_DEV = docker-compose run --rm dev
 COMPOSE_UP_DEV = docker-compose up dev
 NETLIFYCTL=netlifyctl
-CHROMA_STYLE=monokai
+# https://xyproto.github.io/splash/docs/all.html
+CHROMA_STYLE=monokailight
 
 # ENVFILE is .env.template by default but can be overwritten
 ENVFILE ?= .env.template
