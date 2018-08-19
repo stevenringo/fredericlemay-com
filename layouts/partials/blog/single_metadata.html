@@ -1,3 +1,12 @@
+<!-- https://gohugo.io/functions/scratch#readout -->
+{{- $scratch := newScratch -}}
+
+<!-- Resize featured image so that when slack, facebook, or twitter displays it, it takes less space -->
+{{- with .Resources.GetMatch "featuredImage" -}}
+   {{- $featuredImage := .Resize "x150 q100" -}}
+   {{- $scratch.Set "featuredImage" $featuredImage -}}
+ {{- end -}}
+
 <meta charset="utf-8">
 <!-- facebook open graph tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -5,8 +14,7 @@
 <meta property="og:title" content="{{ .Title }}"/>
 <meta property="og:description" content="{{ .Summary }}"/>
 <meta property="og:site_name" content="fredericlemay.com"/>
-
-{{- with .Resources.GetMatch "featuredImage" -}}
+{{- with $scratch.Get "featuredImage" -}}
 <meta property="og:image" content="{{ .Permalink }}"/>
 {{- end -}}
 
@@ -15,7 +23,7 @@
 <meta name="twitter:domain" value="fredericlemay.com" />
 <meta name="twitter:title" value="{{ .Title }}" />
 <meta name="twitter:description" value="{{ .Summary }}" />
-{{- with .Resources.GetMatch "featuredImage" -}}
+{{- with $scratch.Get "featuredImage" -}}
 <meta name="twitter:image" content="{{ .Permalink }}"/>
 {{- end -}}
 <meta name="twitter:url" value="{{ .Permalink }}" />
