@@ -5,3 +5,4 @@ public
 .env*
 !.env.template
 !.env.example
+*.log

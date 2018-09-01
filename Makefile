@@ -21,9 +21,13 @@ generateChromaStyle:
 	$(COMPOSE_RUN_HUGO) ./scripts/generate_chroma_style.sh
 .PHONY: generateChromaStyle
 
-shell:
+shellHugo:
 	$(COMPOSE_RUN_HUGO) bash
-.PHONY: shell
+.PHONY: shellHugo
+
+shellNetlify:
+	$(COMPOSE_RUN_NETLIFY)
+.PHONY: shellNetlify
 
 server:
 	$(COMPOSE_UP_HUGO)
